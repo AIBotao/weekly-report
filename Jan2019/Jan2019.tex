@@ -13,62 +13,117 @@
 \newcommand{\e}{{\mathrm{exp}}}
 \newcommand{\dd}{{\mathrm d}}
 \newcommand{\comment}[1]{}
+\newcommand{\mb}{\mathbf}
 \reversemarginpar
 
 \usepackage[final]{graphicx}
 \usepackage{fancyhdr}
 %\graphicspath{{Papers/}}
 \usepackage{amsthm,amssymb,amsmath}
+\usepackage{cite}
+\usepackage{geometry}
+\usepackage{amsmath}
+%\usepackage[top=2.5cm, bottom=2.5cm, right=3.5cm, left=3.5cm]{geometry}
+\geometry{a4paper,scale=0.8}
+\setcounter{secnumdepth}{4}
 
-\title{Guidelines to Prepare a Research Progress Report}
+\title{Research Progress Report}
 
-\author{Prof. H. H. Nguyen}
+\author{Botao Zhu}
 
 \begin{document}
+	
+	\maketitle
+	
+	\lhead{\sf Research Progress Report} \chead{} \rhead{\sf Botao Zhu}
+	\lfoot{CTRG, University of Saskatchewan} \cfoot{} \rfoot{Page \thepage}
+	\renewcommand{\footrulewidth}{1.0pt}
+	\renewcommand{\headrulewidth}{2.0pt}
+	\pagestyle{fancy}
+	
+	\renewcommand{\thesection}{\arabic{section}}
+	
+	\section{Reading and Research Activities}
+	
+	\subsection{Summary}
+	[1] proposed a deep learning based routing table construction method for a GPU-accelerated SDR. They adopted supervised Deep Belief Architectures(DBA) to compute the subsequent nodes with the traffic patterns of the edge routers as the input. And then, they presented unique characterizations of inputs and outputs based on the traffic patterns at the edge routers. They demonstrated how the trained DBA can predict the nodes, the benefits of the deep learning based routing strategy in terms of lower signaling overhead as well as fast convergence and effectiveness of proposed deep learning based solution compared to a benchmark routing method through both analysis and extensive.  
+	
+	\subsection{Introduction}
+	\subsubsection{Deep Learning Based Routing Strategy}
+    \paragraph{Input and Output Design}
+    
+    The traffic pattern is served as the input to the deep learning structure and processed for routing path decision as the output. The traffic pattern at each router can be defined as the number of inbound packets of the router during each time interval,such as $\beta\bigtriangleup$t. Therefore, by assuming that a network comprises of N routers, we can use a matrix of $\beta$ rows and N columns to represent the traffic patterns of all routers. The simulation results demonstrate that it is accurate enough to set the value of $\beta$ to 1. The output layer can be designed to give the next node similar to the distributed routing strategy because of its lower complexity and higher tolerance. In the vector, only a single element has the value of 1, the order of which represents the next node.So ,we can use two N dimensional vectors to represent the input and output.
+	
+	\paragraph{Deep Learning Structure Design}
+	The authors choose the DBA as the deep learning structures as shown in Figure 1.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\linewidth]{figure1.png}
+		\caption{Considered L-layer DBA}
+		\label{fig-label}
+	\end{figure}
+	
+	DBA can be also seen as a stack of $\left(L-2\right)$ Restricted Boltzmann Machines(RBM) and a logistic regression layer as the top layer. The structure of RBM consists of two layers, the visible layer, $\mb{v}$, and the hidden layer,$\mb{h}$, shown in Figure 2.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\linewidth]{figure2.png}
+		\caption{RBM}
+		\label{fig-label}
+	\end{figure}
+	While training an RBM, sets of unlabeled data are given to the visible layer, and the value of the weights and biases are repeatedly adjusted until the hidden layer can reconstruct the visible layer. To mathematically model the training process, they use a log-likelihood function of the visible layer given as follows.
+	\begin{equation}
+	l\left(\theta,a\right)=\sum_{t=1}^{m}\log{p\left(v^t\right)}
+	\end{equation}
+	where $\theta$ denotes the vector consisting of all the values of the weights and biases of the hidden layer.\\
+	Since RBM is a particular form of log-linear Markov Random Field, the energy function, $\E\left(v,h\right)$, and the joint probability function, $p\left(v,h\right)$, are defined as follows:\\
+	\begin{eqnarray}
+	E\left(v,h\right) &=& -\sum_{i}a_iv_i-\sum_{j}b_jh_j-\sum_{i}\sum_{j}h_jw_{ji}v_i\\
+	p\left(v,h\right) &=& \frac{e^{-E\left(v,h\right)}}{Z}\\
+	Z &=& \sum_{v}\sum_{h}e^{-E\left(v,h\right)}
+	\end{eqnarray}
+	where $v_i$ and $h_j$ are the unit $i$ in the visible layer and the unit $j$ in the hidden layer respectively. $Z$ represents the normalizing constant partition function. Also, the relationship between $p\left(v\right)$ and $p\left(v,h\right)$ can be expressed as follows:\\
+	\begin{equation}
+	p\left(v\right)=\sum_{h}\left(v,h\right)
+	\end{equation}
+	However, the complexity of the calculation is extremely high. To solve this problem, they use the Gibbs Sampling method to sample the values of $v$ and $h$ to approximate the real values since the conditional distribution probability of one layer can be calculated. As each unit is independent on the other units in the same layer, when one layers is fixed, the conditional distribution probability of the other layer can be calculated as follows:
+	\begin{eqnarray}
+	p\left(v|h;\theta,a\right) &=& \prod_{i}p\left(v_i|h;\theta,a\right)\\
+	p\left(h|v;\theta,a\right) &=& \prod_{j}p\left(h_j|v;\theta,a\right)
+	\end{eqnarray}
+	Since input units are continuous, they use Gaussian probability distribution to model the traffic patterns. Equations$\left(2\right)$ and $\left(6\right)$ should be revised as follows:
+	\begin{eqnarray}
+	E\left(v,h\right) &=& -\sum_{i}\frac{\left(v_i-a_i\right)^2}{2{\delta_i}^2}-\sum_{j}b_jh_j-\sum_{i}\sum_{j}\frac{v_i}{\delta_i}h_jw_{ji}\\
+	p\left(v_i|h;\theta,a\right) &=& N\left(a_i+\delta_i\sum_{j}h_jw_{ji},{\delta_i}^2\right)	
+	\end{eqnarray}
+	where $\delta_i$ is the value of the variance for the unit $v_i$. 
+	However, in Figure 3, we can see that the visible layer of $RBM_{L-2}$ consists of not only $RBM_{L-3}$'s hidden layer but also the output layer of the DBA, $y$. Its hidden layer is the top hidden layer of the DBA and energy function is expressed as follows.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\linewidth]{figure3.png}
+		\caption{Last RBM}
+		\label{fig-label}
+	\end{figure}
+	\begin{equation}
+	E\left(v,h,y\right) = -\sum_{i}a_iv_i-\sum_{j}b_jh_j-\sum{k}c_ky_k-\sum_{i}\sum_{j}h_jw_{ji}v_i-\sum_{j}\sum_{k}h_jw_jky_k
+	\end{equation}
+	where $y$ represents the vector in the output layer. $c_k$ is the bias of the unit $y_k$. $w_{jk}$ represents the weight of the link connecting the units $h_j$ and $y_k$. The conditional distribution of the concatenated vector consisting of $v$ and $y$ is,
+	\begin{eqnarray}
+	p\left(v,y|h;\theta,a\right) &=& p\left(v|h;\theta,a\right)p\left(y|h;\theta,a\right)\\
+	&=&\prod_{i}p\left(v_i|h;\theta,a\right)\prod_{k}p\left(y_k|h;\theta,a\right)
+	\end{eqnarray}
+	The purpose of supervised training is to minimize the difference between the output of the DBA and the labeled output $y$. They use the cross-entropy cost function to measure their difference given as bellow.
+	
+	
+	
+	\section{Objectives for the Next 2 Weeks}
+	
+	
+	\section{Advisor's Comments}
+	
 
-\maketitle
-
-\lhead{\sf Guidelines to Prepare a Research Progress Report} \chead{} \rhead{\sf Prof. H. Nguyen}
-\lfoot{CTRG, University of Saskatchewan} \cfoot{} \rfoot{Page \thepage}
-\renewcommand{\footrulewidth}{1.0pt}
-\renewcommand{\headrulewidth}{2.0pt}
-\pagestyle{fancy}
-
-\renewcommand{\thesection}{\arabic{section}}
-
-\chapter{Weeks of October 1 and 8, 2007}
-
-\section*{Introduction}
-
-This template provides guidelines on how to prepare/organize your research progress biweekly. Feel free to include figures, tables, etc. as needed. Please also document and organize your bibliography file similarly to the attached sample bib file. A citing example is as follows: \cite{Nguyen0705,Alouini-TCOM-03-2000}.
-
-As indicated, report is required every two weeks, on Monday (Saskatoon time) of the due week, at any time and via email (\verb"ha.nguyen@usask.ca"). The following are the \textbf{first} due dates applied to you:
-
-\begin{itemize}
-\item Duy Nguyen: October 12
-\item Tung Pham:  October 12
-\item Nam Vien:  October 12
-
-\item Zohreh Andalibi:  October 19
-\item Ha Xuan Nguyen:  October 19
-\item Son Hoang:  October 19
-\end{itemize}
-
-Of course you can send me your updated progress report any time if you think my early feedback might be useful. However, I might not be able to response right away.
-
-Preparing the report in \LaTeX\; is required. Always use the same \LaTeX\; file. You just simply add more content to it as a new chapter. I will provide my comments into the \LaTeX\; file as well. The following are suggested sections in each report (chapter):
-
-\section{Summary of Reading and Research Activities}
-
-\section{Accomplishments}
-
-\section{Objectives for the Next 2 Weeks}
-
-\section{Advisor's Comments}
-
-%\bibliographystyle{IEEEtran}
-\bibliographystyle{ieeetr}
-
-\bibliography{Sample_BIB_File}
-
+	I'm very happy.cite \cite{IEEEexample:IEEEwebsite}
+	\bibliographystyle{IEEEtran}
+	
+	\bibliography{IEEEexample}
+	
 \end{document}
