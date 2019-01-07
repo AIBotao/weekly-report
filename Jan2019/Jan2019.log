@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.1.2)  6 JAN 2019 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.1.2)  6 JAN 2019 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -191,7 +191,17 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@thisruleclass=\count106
 \@lastruleclass=\count107
 \@thisrulewidth=\dimen134
-) (./Jan2019.aux)
+) (./Jan2019.aux
+
+LaTeX Warning: Label `fig-label' multiply defined.
+
+
+LaTeX Warning: Label `fig-label' multiply defined.
+
+
+LaTeX Warning: Label `fig-label' multiply defined.
+
+)
 \openout1 = `Jan2019.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -206,8 +216,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
-
-(c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count108
 \scratchdimen=\dimen135
@@ -320,43 +329,56 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Non-PDF special ignored!
 <special> papersize=8.5in,11in
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
 <figure1.png, id=8, 262.73157pt x 252.945pt>
 File: figure1.png Graphic file (type png)
 <use figure1.png>
-Package pdftex.def Info: figure1.png  used on input line 61.
+Package pdftex.def Info: figure1.png  used on input line 63.
 (pdftex.def)             Requested size: 239.00406pt x 230.11084pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <figure2.png, id=10, 453.19313pt x 334.24875pt>
 File: figure2.png Graphic file (type png)
 <use figure2.png>
-Package pdftex.def Info: figure2.png  used on input line 69.
+Package pdftex.def Info: figure2.png  used on input line 71.
 (pdftex.def)             Requested size: 239.00406pt x 176.27374pt.
- [1 <./figure1.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
 
  []
 
-[2 <./figure2.PNG>]
+[2 <./figure1.PNG> <./figure2.PNG>]
 <figure3.png, id=29, 633.11531pt x 349.305pt>
 File: figure3.png Graphic file (type png)
 <use figure3.png>
-Package pdftex.def Info: figure3.png  used on input line 102.
+Package pdftex.def Info: figure3.png  used on input line 104.
 (pdftex.def)             Requested size: 239.00406pt x 131.86316pt.
  [3 <./figure3.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-<figure4.png, id=37, 481.04718pt x 229.60782pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figure4.png, id=34, 481.04718pt x 229.60782pt>
 File: figure4.png Graphic file (type png)
 <use figure4.png>
 Package pdftex.def Info: figure4.png  used on input line 165.
@@ -364,7 +386,39 @@ Package pdftex.def Info: figure4.png  used on input line 165.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! Misplaced \noalign.
-\toprule ->\noalign 
-                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
-l.172 		\t
+(./Jan2019.bbl [4] [5 <./figure4.PNG>]) [6
+
+] (./Jan2019.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3223 strings out of 492616
+ 42522 string characters out of 6132769
+ 122288 words of memory out of 5000000
+ 7073 multiletter control sequences out of 15000+600000
+ 12884 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,11n,43p,1130b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2018/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2018/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2018/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy6.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb>
+Output written on Jan2019.pdf (7 pages, 386757 bytes).
+PDF statistics:
+ 97 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+

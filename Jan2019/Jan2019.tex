@@ -48,11 +48,13 @@
 	\section{Reading and Research Activities}
 	
 	\subsection{Summary}
-	[1] proposed a deep learning based routing table construction method for a GPU-accelerated SDR. They adopted supervised Deep Belief Architectures(DBA) to compute the subsequent nodes with the traffic patterns of the edge routers as the input. And then, they presented unique characterizations of inputs and outputs based on the traffic patterns at the edge routers. They demonstrated how the trained DBA can predict the nodes, the benefits of the deep learning based routing strategy in terms of lower signaling overhead as well as fast convergence and effectiveness of proposed deep learning based solution compared to a benchmark routing method through both analysis and extensive.  
+	[1] proposed a deep learning based routing table construction method for a GPU-accelerated SDR. They adopted supervised Deep Belief Architectures(DBA) to compute the subsequent nodes with the traffic patterns of the edge routers as the input. And then, they presented unique characterizations of inputs and outputs based on the traffic patterns at the edge routers. They demonstrated how the trained DBA can predict the nodes, the benefits of the deep learning based routing strategy in terms of lower signaling overhead as well as fast convergence and effectiveness of proposed deep learning based solution compared to a benchmark routing method through both analysis and extensive. \\
+	
+	[2] aims to solve the following problems: (1) mitigate the traffic overhead imposed on BSs in disaster situations, (2) extend BS coverage through collaboration with wireless ad-hoc nextworks, (3) establish the maximum number of communication connections in situations in which network resources are insufficient and communication links are unstable. In this paper, the node degree of wireless communication is classified by deep learning for disaster situations and virtual routes are set according to the predetermined node by employing the Viterbi algorithm.
 	
 	\subsection{Deep Learning Based Routing Strategy}
 	\subsubsection{Input and Output Design}
-    The traffic pattern is served as the input to the deep learning structure and processed for routing path decision as the output. The traffic pattern at each router can be defined as the number of inbound packets of the router during each time interval,such as $\beta\bigtriangleup$t. Therefore, by assuming that a network comprises of N routers, we can use a matrix of $\beta$ rows and N columns to represent the traffic patterns of all routers. The simulation results demonstrate that it is accurate enough to set the value of $\beta$ to 1. The output layer can be designed to give the next node similar to the distributed routing strategy because of its lower complexity and higher tolerance. In the vector, only a single element has the value of 1, the order of which represents the next node.So ,we can use two N dimensional vectors to represent the input and output.
+    The traffic pattern is served as the input to the deep learning structure and processed for routing path decision as the output. The traffic pattern at each router can be defined as the number of inbound packets of the router during each time interval,such as $\beta\bigtriangleup$t. Therefore, by assuming that a network comprises of N routers, we can use a matrix of $\beta$ rows and N columns to represent the traffic patterns of all routers. The simulation results demonstrate that it is accurate enough to set the value of $\beta$ to 1. The output layer can be designed to give the next node similar to the distributed routing strategy because of its lower complexity and higher tolerance. In the vector, only a single element has the value of 1, the order of which represents the next node.So, we can use two N dimensional vectors to represent the input and output.
 	
 	\subsubsection{Deep Learning Structure Design}
 	The authors choose the DBA as the deep learning structures as shown in Figure 1.
@@ -142,8 +144,6 @@
 	\end{tabular}
 	\paragraph{Running Phase}
 	Every edge router can utilize the next node information to construct the whole paths from itself to all the other edge routers. They use an array of $\mathnormal{N}$ elements, $\mathcal{TP}\left[\mathnormal{N}\right]$, to save the numbers of inbound packets of $\mathnormal{N}$ routers in the network to represent the traffic patterns, and $\theta\left[\mathnormal{N} - \mathnormal{I}\right]\left[\mathnormal{N} - 1\right]$ to save the parameters of all the DBAs in the network. Another array $\mathcal{ER}\left[\mathnormal{N} - \mathnormal{I}\right]$ is used to save the sequence numbers of the edge routers in the network since they are not continuous. Each edge router can obtain the outputs of DBAs to construct the paths to $\left(\mathnormal{N} - \mathnormal{I} - 1\right)$ edge routers. And then using a matrix, $\mathcal{NR}\left[\mathnormal{N}\right]\left[\mathnormal{N} - \mathnormal{I} - 1\right]$, to save the results of these DBAs that can be used to build the whole paths to all the other edge routers. Figure 4 is the routing model and Table 1 is an example of the routing table.\\
-	
-	
 
 	\begin{table}[!h]
 		\centering
@@ -167,29 +167,9 @@
 		\label{fig-label}
 	\end{figure}
 
-    \begin{tabular}{ll}
-	    \centering
-		\toprule
-		\textbf{Algorithm 2}. Running Phase\\
-		\hline
-		\textbf{Input:} $\mathcal{TP}\left[N\right], \theta\left[\mathnormal{N} - \mathnormal{I}\right]\left[\mathnormal{N} - 1\right], \mathcal{ER}\left[\mathnormal{N} - \mathnormal{I}\right], sr$\\
-		\textbf{Output:} $\mathcal{NR}\left[\mathnormal{N}\right]\left[\mathnormal{N} - \mathnormal{I} -1\right]$\\
-		\hline
-		1: $D \gets \mathcal{ER}\left[\mathnormal{N} - \mathnormal{I}\right] - sr$\\
-		2: \textbf{while} $\textbf{D} \ne 0$ \textbf{do}\\
-		3:  \quad $d \in \textbf{D}$\\
-		4:  \quad $s \gets sr$\\
-		5:  \quad \textbf{repeat}\\
-		6:  \quad\quad $\theta^{'} \gets \theta\left[s\right]\left[d\right]$\\
-		7:  \quad\quad $nr \gets$ run DBA with $\theta^{'}$ and $\mathcal{TP}\left[N\right]$\\
-		8:  \quad\quad $\mathcal{NR}\left[s\right]\left[d\right] \gets nr$\\
-		9：  \quad $s \gets nr$\\
-		10: \textbf{until} $nr = d$\\
-		11:  $D \gets D - d$\\
-		12: \textbf{end while}\\
-		13: \textbf{return} $\mathcal{NR}\left[N\right]\left[N - I -1\right]$\\
-		\hline
-	\end{tabular}
+	\subsection{Classification of node degree based on deep learning routing method applied for virtual route assignment}
+	
+	\subsubsection{Input and Output Design}
 	
 	\section{Objectives for the Next 2 Weeks}
 	
