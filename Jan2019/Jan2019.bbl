@@ -21,9 +21,35 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{IEEEexample:IEEEwebsite}
+\bibitem{5408367}
+T.~Hu and Y.~Fei, ``Qelar: A machine-learning-based adaptive routing protocol
+  for energy-efficient and lifetime-extended underwater sensor networks,''
+  \emph{IEEE Transactions on Mobile Computing}, vol.~9, no.~6, pp. 796--809,
+  June 2010.
+
+\bibitem{7792369}
+N.~Kato, Z.~M. Fadlullah, B.~Mao, F.~Tang, O.~Akashi, T.~Inoue, and
+  K.~Mizutani, ``The deep learning vision for heterogeneous network traffic
+  control: Proposal, challenges, and future perspective,'' \emph{IEEE Wireless
+  Communications}, vol.~24, no.~3, pp. 146--153, June 2017.
+
+\bibitem{YangMinLee}
+Y.~Lee, ``Classification of node degree based on deep learning and routing
+  method applied for virtual route assignment,'' \emph{Ad Hoc Networks},
+  vol.~58, pp. 70--85, April 2017.
+
+\bibitem{DBLP:journals/corr/abs-1709-07080}
 \BIBentryALTinterwordspacing
-(2015) The {IEEE} website. [Online]. Available: \url{http://www.ieee.org/}
+G.~Stampa, M.~Arias, D.~Sanchez{-}Charles, V.~Munt{\'{e}}s{-}Mulero, and
+  A.~Cabellos, ``A deep-reinforcement learning approach for software-defined
+  networking routing optimization,'' \emph{CoRR}, vol. abs/1709.07080, 2017.
+  [Online]. Available: \url{http://arxiv.org/abs/1709.07080}
 \BIBentrySTDinterwordspacing
+
+\bibitem{7935536}
+B.~Mao, Z.~M. Fadlullah, F.~Tang, N.~Kato, O.~Akashi, T.~Inoue, and
+  K.~Mizutani, ``Routing or computing? the paradigm shift towards intelligent
+  computer network packet transmission based on deep learning,'' \emph{IEEE
+  Transactions on Computers}, vol.~66, no.~11, pp. 1946--1960, Nov 2017.
 
 \end{thebibliography}

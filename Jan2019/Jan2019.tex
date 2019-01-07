@@ -24,9 +24,13 @@
 \usepackage{geometry}
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{url}
 %\usepackage[top=2.5cm, bottom=2.5cm, right=3.5cm, left=3.5cm]{geometry}
 \geometry{a4paper,scale=0.8}
-\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{3}
 
 \title{Research Progress Report}
 
@@ -35,7 +39,6 @@
 \begin{document}
 	
 	\maketitle
-	
 	\lhead{\sf Research Progress Report} \chead{} \rhead{\sf Botao Zhu}
 	\lfoot{CTRG, University of Saskatchewan} \cfoot{} \rfoot{Page \thepage}
 	\renewcommand{\footrulewidth}{1.0pt}
@@ -48,36 +51,44 @@
 	\section{Reading and Research Activities}
 	
 	\subsection{Summary}
-	[1] proposed a deep learning based routing table construction method for a GPU-accelerated SDR. They adopted supervised Deep Belief Architectures(DBA) to compute the subsequent nodes with the traffic patterns of the edge routers as the input. And then, they presented unique characterizations of inputs and outputs based on the traffic patterns at the edge routers. They demonstrated how the trained DBA can predict the nodes, the benefits of the deep learning based routing strategy in terms of lower signaling overhead as well as fast convergence and effectiveness of proposed deep learning based solution compared to a benchmark routing method through both analysis and extensive. \\
+	In this section, some applications of applying Deep Learning into the field of routing were introduced.\\
 	
-	[2] aims to solve the following problems: (1) mitigate the traffic overhead imposed on BSs in disaster situations, (2) extend BS coverage through collaboration with wireless ad-hoc nextworks, (3) establish the maximum number of communication connections in situations in which network resources are insufficient and communication links are unstable. In this paper, the node degree of wireless communication is classified by deep learning for disaster situations and virtual routes are set according to the predetermined node by employing the Viterbi algorithm.
+	\noindent\cite{5408367} proposed an adaptive, energy-efficient, and lifetime-aware routing based on Q-learning algorithm, which can deal with challenges such as the large propagation delay and the stringent power in the condition of underwater sensor network (Remarks:\textcolor{red}{need to study Q-learning}). In order to reduce the complexity of computation for finding a global optimal path in WSN, the authors used Deep Learning(DL) to relieve the path search burden.\\
+
+	\noindent\cite{7792369} proposed a DL approach to control traffic in heterogeneous network. First, they collected enough parameters by executing the traditional routing protocols such as Open Shortest Path First(OSPF). And then, they used a supervised training method to process the data. During this period, a greedy layer-wise training method was used to initialize and a backpropagation algorithm was used to fine-tune. During the phase of running, the DL model needs to be run K rounds, which is the number of hops, by the source node for finding the optimal path from the source node to the destination node. The history of the traffic patterns of all the routers work as the input and only one router is chosen as the output.\\
+	
+	\noindent\cite{YangMinLee} proposed a DL-based routing scheme. It aims to solve the following problems: (1) mitigate the traffic overhead imposed on BSs in disaster situations, (2) extend BS coverage through collaboration with wireless ad-hoc nextworks, (3) establish the maximum number of communication connections in situations in which network resources are insufficient and communication links are unstable. To begin with, the node degrees are divided into five stages using DL algorithm. Then, Viterbi algorithm was used to generated a virtual router in terms of the node degrees. At the end, the route was established by an IP-based routing procedure.\\
+	
+	\noindent\cite{DBLP:journals/corr/abs-1709-07080} used a Deep-Reinforcement Learning(DRL) to optimize routing by designing and training a DRL agent, which can provide routing configurations that tend to minimize the network's delay.\\
+	
+	\noindent However, because source nodes need to run many models\cite{7792369}, which will consume high power, \cite{7935536} integrated \cite{7792369}'s  method with programmable routers and achieved good performance. It proposed a DL-based routing table construction method for a GPU-accelerated SDR. They adopted supervised Deep Belief Architectures(DBA) to compute the subsequent nodes with the traffic patterns of the edge routers as the input. And then, they presented unique characterizations of inputs and outputs based on the traffic patterns at the edge routers. They demonstrated how the trained DBA can predict the nodes, the benefits of the DL-based routing strategy in terms of lower signaling overhead as well as fast convergence and effectiveness of proposed DL-based solution compared to a benchmark routing method through both analysis and extensive. Next section will introduce clearly.\\
 	
 	\subsection{Deep Learning Based Routing Strategy}
 	\subsubsection{Input and Output Design}
-    The traffic pattern is served as the input to the deep learning structure and processed for routing path decision as the output. The traffic pattern at each router can be defined as the number of inbound packets of the router during each time interval,such as $\beta\bigtriangleup$t. Therefore, by assuming that a network comprises of N routers, we can use a matrix of $\beta$ rows and N columns to represent the traffic patterns of all routers. The simulation results demonstrate that it is accurate enough to set the value of $\beta$ to 1. The output layer can be designed to give the next node similar to the distributed routing strategy because of its lower complexity and higher tolerance. In the vector, only a single element has the value of 1, the order of which represents the next node.So, we can use two N dimensional vectors to represent the input and output.
+    The traffic pattern is served as the input to the DL structure and processed for routing path decision as the output. The traffic pattern at each router can be defined as the number of inbound packets of the router during each time interval,such as $\beta\bigtriangleup$t. Therefore, by assuming that a network comprises of N routers, we can use a matrix of $\beta$ rows and N columns to represent the traffic patterns of all routers. The simulation results demonstrate that it is accurate enough to set the value of $\beta$ to 1. The output layer can be designed to give the next node similar to the distributed routing strategy because of its lower complexity and higher tolerance. In the vector, only a single element has the value of 1, the order of which represents the next node. So, we can use two N dimensional vectors to represent the input and output.
 	
 	\subsubsection{Deep Learning Structure Design}
-	The authors choose the DBA as the deep learning structures as shown in Figure 1.
+	The authors choose the DBA as the deep learning structures as shown in Figure~\ref{1stfig}.
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.5\linewidth]{figure1.png}
 		\caption{Considered L-layer DBA}
-		\label{fig-label}
+		\label{1stfig}
 	\end{figure}
 	
-	DBA can be also seen as a stack of $\left(L-2\right)$ Restricted Boltzmann Machines(RBM) and a logistic regression layer as the top layer. The structure of RBM consists of two layers, the visible layer, $\mb{v}$, and the hidden layer,$\mb{h}$, shown in Figure 2.
+	\noindent DBA can be also seen as a stack of $\left(L-2\right)$ Restricted Boltzmann Machines(RBM) and a logistic regression layer as the top layer. The structure of RBM consists of two layers, the visible layer, $\mb{v}$, and the hidden layer,$\mb{h}$, shown in Figure~\ref{2ndfig}.
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.5\linewidth]{figure2.png}
 		\caption{RBM}
-		\label{fig-label}
+		\label{2ndfig}
 	\end{figure}
 	While training an RBM, sets of unlabeled data are given to the visible layer, and the value of the weights and biases are repeatedly adjusted until the hidden layer can reconstruct the visible layer. To mathematically model the training process, they use a log-likelihood function of the visible layer given as follows.
 	\begin{equation}
 	l\left(\theta,a\right)=\sum_{t=1}^{m}\log{p\left(v^t\right)}
 	\end{equation}
 	where $\theta$ denotes the vector consisting of all the values of the weights and biases of the hidden layer.\\
-	%Since RBM is a particular form of log-linear Markov Random Field, the energy function, $\E\left(v,h\right)$, and the joint probability function, $p\left(v,h\right)$, are defined as follows:\\
+	Since RBM is a particular form of log-linear Markov Random Field, the energy function, $E\left(v,h\right)$, and the joint probability function, $p\left(v,h\right)$, are defined as follows:\\
 	\begin{eqnarray}
 	E\left(v,h\right) &=& -\sum_{i}a_iv_i-\sum_{j}b_jh_j-\sum_{i}\sum_{j}h_jw_{ji}v_i\\
 	p\left(v,h\right) &=& \frac{e^{-E\left(v,h\right)}}{Z}\\
@@ -98,12 +109,12 @@
 	p\left(v_i|h;\theta,a\right) &=& N\left(a_i+\delta_i\sum_{j}h_jw_{ji},{\delta_i}^2\right)	
 	\end{eqnarray}
 	where $\delta_i$ is the value of the variance for the unit $v_i$. 
-	However, in Figure 3, we can see that the visible layer of $RBM_{L-2}$ consists of not only $RBM_{L-3}$'s hidden layer but also the output layer of the DBA, $y$. Its hidden layer is the top hidden layer of the DBA and energy function is expressed as follows.
+	However, in Figure~\ref{3rdfig}, we can see that the visible layer of $RBM_{L-2}$ consists of not only $RBM_{L-3}$'s hidden layer but also the output layer of the DBA, $y$. Its hidden layer is the top hidden layer of the DBA and energy function is expressed as follows.
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.5\linewidth]{figure3.png}
 		\caption{Last RBM}
-		\label{fig-label}
+		\label{3rdfig}
 	\end{figure}
 	\begin{equation}
 	E\left(v,h,y\right) = -\sum_{i}a_iv_i-\sum_{j}b_jh_j-\sum{k}c_ky_k-\sum_{i}\sum_{j}h_jw_{ji}v_i-\sum_{j}\sum_{k}h_jw_jky_k
@@ -113,7 +124,7 @@
 	p\left(v,y|h;\theta,a\right) &=& p\left(v|h;\theta,a\right)p\left(y|h;\theta,a\right)\\
 	&=&\prod_{i}p\left(v_i|h;\theta,a\right)\prod_{k}p\left(y_k|h;\theta,a\right)
 	\end{eqnarray}
-	The purpose of supervised training is to minimize the difference between the output of the DBA and the labeled output $y$. They use the cross-entropy cost function to measure their difference given as bellow.\\
+	The purpose of supervised training is to minimize the difference between the output of the DBA and the labeled output $y$.
 	They use the cross-entropy cost function to measure the difference between the output of the DBA, denoted by $h_\theta\left(x\right)$, and the labeled output $y$.
 	\begin{equation}
 	C\left(\theta\right)=-\frac{1}{m}\sum_{t=1}^{m}\left(y^t\log\left(h_\theta\left(x^t\right)\right)+\left(1-y^t\right)\log\left(1-h_\theta\left(x^t\right)\right)\right)+\frac{\lambda}{2}\sum_{l=2}^{L}\sum_{j=1}^{n_l}\sum_{i=1}^{n_{l-1}}\left({w_{ji}}^l\right)^2
@@ -142,8 +153,34 @@
 		5: \textbf{return} $\theta$\\
 		\hline
 	\end{tabular}
-	\paragraph{Running Phase}
-	Every edge router can utilize the next node information to construct the whole paths from itself to all the other edge routers. They use an array of $\mathnormal{N}$ elements, $\mathcal{TP}\left[\mathnormal{N}\right]$, to save the numbers of inbound packets of $\mathnormal{N}$ routers in the network to represent the traffic patterns, and $\theta\left[\mathnormal{N} - \mathnormal{I}\right]\left[\mathnormal{N} - 1\right]$ to save the parameters of all the DBAs in the network. Another array $\mathcal{ER}\left[\mathnormal{N} - \mathnormal{I}\right]$ is used to save the sequence numbers of the edge routers in the network since they are not continuous. Each edge router can obtain the outputs of DBAs to construct the paths to $\left(\mathnormal{N} - \mathnormal{I} - 1\right)$ edge routers. And then using a matrix, $\mathcal{NR}\left[\mathnormal{N}\right]\left[\mathnormal{N} - \mathnormal{I} - 1\right]$, to save the results of these DBAs that can be used to build the whole paths to all the other edge routers. Figure 4 is the routing model and Table 1 is an example of the routing table.\\
+
+	\paragraph{Running Phase} 
+	Every edge router can utilize the next node information to construct the whole paths from itself to all the other edge routers. They use an array of $\mathnormal{N}$ elements, $\mathcal{TP}\left[\mathnormal{N}\right]$, to save the numbers of inbound packets of $\mathnormal{N}$ routers in the network to represent the traffic patterns, and $\theta\left[\mathnormal{N} - \mathnormal{I}\right]\left[\mathnormal{N} - 1\right]$ to save the parameters of all the DBAs in the network. Another array $\mathcal{ER}\left[\mathnormal{N} - \mathnormal{I}\right]$ is used to save the sequence numbers of the edge routers in the network since they are not continuous.\\
+	
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Algorithm 2}. Running Phase\\
+		\hline
+		\textbf{Input:} $\mathcal{TP}\left[N\right], \theta\left[\mathnormal{N} - \mathnormal{I}\right]\left[\mathnormal{N} - 1\right], \mathcal{ER}\left[\mathnormal{N} - \mathnormal{I}\right], sr$\\
+		\textbf{Output:} $\mathcal{NR}\left[\mathnormal{N}\right]\left[\mathnormal{N} - \mathnormal{I} -1\right]$\\
+		\hline
+		1: $D \gets \mathcal{ER}\left[\mathnormal{N} - \mathnormal{I}\right] - sr$\\
+		2: \textbf{while} $\textbf{D} \ne 0$ \textbf{do}\\
+		3:  \quad $d \in \textbf{D}$\\
+		4:  \quad $s \gets sr$\\
+		5:  \quad \textbf{repeat}\\
+		6:  \quad\quad $\theta^{'} \gets \theta\left[s\right]\left[d\right]$\\
+		7:  \quad\quad $nr \gets$ run DBA with $\theta^{'}$ and $\mathcal{TP}\left[N\right]$\\
+		8:  \quad\quad $\mathcal{NR}\left[s\right]\left[d\right] \gets nr$\\
+		9:  \quad $s \gets nr$\\
+		10: \textbf{until} $nr = d$\\
+		11:  $D \gets D - d$\\
+		12: \textbf{end while}\\
+		13: \textbf{return} $\mathcal{NR}\left[N\right]\left[N - I -1\right]$\\
+		\hline
+	\end{tabular}\\
+
+	\noindent Running algorithm 2, each edge router can obtain the outputs of DBAs to construct the paths to $\left(\mathnormal{N} - \mathnormal{I} - 1\right)$ edge routers. And then using a matrix, $\mathcal{NR}\left[\mathnormal{N}\right]\left[\mathnormal{N} - \mathnormal{I} - 1\right]$, to save the results of these DBAs that can be used to build the whole paths to all the other edge routers. Figure~\ref{4thfig} is the routing model and Table 1 is an example of the routing table.\\
 
 	\begin{table}[!h]
 		\centering
@@ -164,25 +201,46 @@
 		\centering
 		\includegraphics[width=0.5\linewidth]{figure4.png}
 		\caption{Routing model}
-		\label{fig-label}
+		\label{4thfig}
 	\end{figure}
-
-	\subsection{Classification of node degree based on deep learning routing method applied for virtual route assignment}
 	
-	\subsubsection{Degree classification on singular moble node}
-	The BS collects the node vector and utilizes numerous node vectors collected as data for composition of the neural network. Each feature of node becomes part of the corpus for deep learning. The node degrees are divided into five stages using a particular reference value. The supervised learning is required to provide the correct answer if it is to enhance the accuracy of classification of the node degree. 
-	\subsubsection{Creation of virtual route}
-	  
+	\subsubsection{Network Performance Analysis}
+	They compared the proposed deep learning method with OSPF by the network signaling overhead, throughput and average delay. 
+	\begin{figure}[!htbp]
+		%\centering
+		\subfigure[Comparison of signaling overhead]{
+			\begin{minipage}[t]{0.35\linewidth}
+				\centering
+				\includegraphics[width=2.4in]{figure5}
+			\end{minipage}%
+		}%
+		\subfigure[Comparison of throughput]{
+			\begin{minipage}[t]{0.35\linewidth}
+				\centering
+				\includegraphics[width=2.4in]{figure6}
+			\end{minipage}%
+		}%
+		\subfigure[Comparison of average delay]{
+			\begin{minipage}[t]{0.35\linewidth}
+				\centering
+				\includegraphics[width=2.4in]{figure7}
+			\end{minipage}
+		}%
+	\centering
+	\caption{Comparison of network performance under different network loads}
+	\end{figure}
 	
 	\section{Objectives for the Next 2 Weeks}
-	
+	\subsection{Reading} 
+	Reading papers foused on ML-based or DL-based routing.
+	\subsection{Course} 
+	Studying chapter 1 and chapter 2 of Neural Networks and Deep Learning, \textbf{Coursera}. \url{https://www.coursera.org/learn/neural-networks-deep-learning}
+	\subsection{Code}
+	Studying the classic routing protocol: LEACH and using Matlab to implement.
 	
 	\section{Advisor's Comments}
 	
-
-	I'm very happy.cite \cite{IEEEexample:IEEEwebsite}
 	\bibliographystyle{IEEEtran}
-	
-	\bibliography{IEEEexample}
+	\bibliography{janbib}
 	
 \end{document}
