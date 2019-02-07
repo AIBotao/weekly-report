@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.1.2)  7 FEB 2019 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.1.2)  7 FEB 2019 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Jan2019.tex
-(./Jan2019.tex
+**3rd2019.tex
+(./3rd2019.tex
 LaTeX2e <2018-12-01>
 (c:/texlive/2018/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2018/09/03 v1.4i Standard LaTeX document class
@@ -233,8 +233,8 @@ Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@cntb=\count112
 \multirow@dima=\skip65
 \bigstrutjot=\dimen137
-) (./Jan2019.aux)
-\openout1 = `Jan2019.aux'.
+) (./3rd2019.aux)
+\openout1 = `3rd2019.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
@@ -480,9 +480,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
-(./Jan2019.bbl [5] [6
+(./3rd2019.bbl [5] [6
 
-]) [7] (./Jan2019.aux) ) 
+]) [7] (./3rd2019.aux) ) 
 Here is how much of TeX's memory you used:
  3650 strings out of 492616
  48540 string characters out of 6132769
@@ -503,7 +503,7 @@ s/cm/cmr9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10
 .pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2
 018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Jan2019.pdf (8 pages, 400817 bytes).
+Output written on 3rd2019.pdf (8 pages, 400817 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream

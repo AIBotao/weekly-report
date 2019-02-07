@@ -89,7 +89,7 @@
 	
 	\begin{table}[!h]
 		\centering
-		\caption{Routing table of $R_3$}
+		\caption{Investigation of machine learning-based routing search}
 		\begin{tabular}{c|c|c|c|c|c}
 			\toprule
 			Ref.& \tabincell{c}{Network\\ Simulation \\Tool} & ML Tool & Dataset Input & Dataset Output & Evaluation Index\\
@@ -113,25 +113,27 @@
 			\cite{doi:10.1155/2015/618072} & NS2 & NS2 & \tabincell{c}{energy consumption\\transmit cost\\receive cost\\data packet size\\sensing radius} & \tabincell{c}{network lifetime\\ packet delivery\\ packet delay\\ network balance}\\
 			\hline
 		\end{tabular}
+	\label{tab1}
 	\end{table}
 	
-	\noindent For the machine learning-based network topology, there are two main ideas: centralized model and distributed model. With regard to the centralized model, the advantage is that it uses the base stations with huge computation power to train machine learning model while the disadvantage is that the common network nodes are difficult to find the base stations in some cases, like the limitation of geography. However, in the distributed model, each node or edge router needs to train several machine learning models according to previous history network traffic for deciding next node. So, the main problems is each node needs to have the abilities of huge computation and storage. Specially, reinforcement learning and neural networks are the most commonly machine learning-based algorithms used in the distributed WSNs. Here is a brief summary.\\
+	\noindent For the machine learning-based network topology, there are two main ideas: centralized model and distributed model. With regard to the centralized model, the advantage is that it uses the base stations with huge computation power to train machine learning model while the disadvantage is that the common network nodes are difficult to find the base stations in some cases, like the limitation of geography. However, in the distributed model, each node or edge router needs to train several machine learning models according to previous history network traffic for deciding next node. So, the main problems is each node needs to have the abilities of huge computation and storage. Specially, reinforcement learning and neural networks are the most commonly machine learning-based algorithms used in the distributed WSNs. Here is a brief summary and Table \ref{tab1} gives a detailed investigation.\\
 	
 	
 	\begin{table}[!h]
 		\centering
-		\caption{}
+		\caption{The comparation of literatures}
 		\begin{tabular}{c|c}
 			\toprule
 			ML Techniques & Ref.\\
 			\hline
 			Neural Network & \cite{7792369} \cite{7935536} \cite{8088549} \cite{8489985} \cite{8485423}\\
 			\hline
-			Reinforcement Learning & \cite{4411037} \cite{5408367} \cite{DBLP:journals/corr/abs-1709-07080} \cite{doi:10.1155/2015/618072}...\\
+			Reinforcement Learning & \cite{4411037} \cite{5408367} \cite{DBLP:journals/corr/abs-1709-07080} \cite{doi:10.1155/2015/618072} \cite{5648764} \cite{8315358}\\
 			\hline
 		\end{tabular}
+	\label{tab2}
 	\end{table}
-     \noindent 1) Key steps of applying Neural Network in wireless networks\\     
+     \noindent \textbf{1) Key steps of applying Neural Network in wireless networks}\\     
      \noindent There are several steps that we need to consider for applying Neural network in wireless network.  
     \begin{itemize}
     	\item The extraction of traffic features matrix or vector\\
@@ -139,7 +141,7 @@
     	\begin{figure}[h!]
     		\centering
     		\includegraphics[width=0.9\linewidth]{figure4.jpg}
-    		\caption{}
+    		\caption{Traffic features}
     		\label{2thfig}
     	\end{figure}\\
     \end{itemize}
@@ -172,55 +174,25 @@
     	\caption{The flow chart of neural network based routing search method}
     	\label{5thfig}   
     \end{figure}\\ 
-    
-	\noindent By reading some literatures, only Professor N. Kato has done a lot of work in using neural network in the field of routing search. But his work assumes each node in the networks has the ability to train the neural network, which requires that each node has enough energy, storage capacity and computing capacity. At the same time, the neural network is supervised learning, how to obtain labeled data is also a big problem.
-	
-	
-	
-	
-	
-	
-	
-	
-	In order to investigate the use of tools further, the following table lists the application of machine learning in other areas of networks.
-	\begin{table}[!h]
-		\centering
-		\caption{Routing table of $R_3$}
-		\begin{tabular}{c|c|c|c|c|c}
-			\toprule
-			& Ref.& \tabincell{c}{Network Simulation \\Tool} & ML Tool & Dataset Input & Dataset Output\\
-			\hline
-			\multirow{2}{*}{Name} & & & & \\ \cline{2-4}
-		\end{tabular}
-	\end{table}
 
-
+	\noindent \textbf{2) Reinforcement learning in wireless networks}\\
+	Reinforcement learning is a branch of machine learning, which is good at controlling an individual who can act independently in a certain environment, and constantly improve its behavior through interaction with the environment. Reinforcement learning problems include how to do it, how to map the environment into action and how to get the greatest reward. In reinforcement learning, learners are decision-making agents. They try to run repeatedly to find the behavior that can get the greatest reward. Generally speaking, actions will not only affect the current incentives, but also the environment at the next time point and all subsequent incentives.\\
 	
-	\subsection{Deep Learning Based Routing Strategy}
-	\subsubsection{Input and Output Design}
+	\noindent Reinforcement learning mainly solves continuous decision making problem, which is very similar to routing search. In reinforcement learning, the routing problem can be consider as a Markov decision process, the agent decides at each state which action to take based on its experiences. After taking an action, the agent gets a reward or cost from the environment. The agent uses the reward to update its policy. The advantage of reinforcement learning based routing is that each node does not need global network information, but can still approximate global optimality. Some research has been done in this area, shown in the table \ref{tab2}. Please see ref. \cite{5648764} for detailed introduction.\\
 	
-	\subsubsection{Deep Learning Structure Design}
-	The authors choose the DBA as the deep learning structures as shown in Figure~\ref{1stfig}.
 	
-	\subsubsection{The Procedures of the Proposed Deep Learning Based Routing Strategy}
-	\paragraph{Initialization Phase}
-
-	\paragraph{Training Phase}
-              
-
-	\paragraph{Running Phase}
-
+	\noindent By reading some literatures, only Professor N. Kato has done a lot of work in using neural network in the field of routing search. But his work assumes each node in the networks has the ability to train the neural network, which requires that each node has enough energy, storage capacity and computing capacity. At the same time, the neural network is supervised learning, how to obtain labeled data is also a big problem.\\
 	
-	\subsubsection{Network Performance Analysis}
-	They compared the proposed deep learning method with OSPF by the network signaling overhead, throughput and average delay. 
+	\noindent Reinforcement learning seems to be a good way to solve routing problems, because it has decision making ability, but has no way to solve perceptual problems. Neural network has strong perception ability, but lacks certain decision making ability. Therefore, deep reinforcement learning, combing deep learning with reinforcement learning, provides a solution for the routing search. The next stage will focus on this point.
+	
+	\subsection{Course Summary}
+	Studied chapter 4 of Neural Networks and Deep Learning and chapter 1 of Improving Deep Neural Networks, \textbf{Coursera}, \url{https://www.deeplearning.ai/deep-learning-specialization/}
 	
 	\section{Objectives for the Next 2 Weeks}
 	\subsection{Reading} 
-	Reading papers foused on ML-based or DL-based routing.
+	Reading papers foused on Deep Reinforcement Learning-based routing.
 	\subsection{Course} 
-	Studying chapter 1 and chapter 2 of Neural Networks and Deep Learning, \textbf{Coursera}. \url{https://www.coursera.org/learn/neural-networks-deep-learning}
-	\subsection{Code}
-	Studying the classic routing protocol: LEACH and using Matlab to implement.
+	Study chapter 2, 3, 4 of Improving Deep Neural Networks, \textbf{Coursera}, \url{https://www.deeplearning.ai/deep-learning-specialization/}
 	
 	\section{Advisor's Comments}
 	
