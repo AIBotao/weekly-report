@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Jan2019.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: janbib.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty author in mininet
+Warning--empty author in tensorflow
+Warning--empty author in WILL
+
+Done.
+You've used 16 entries,
+            4087 wiz_defined-function locations,
+            966 strings with 11288 characters,
+and the built_in function-call counts, 11329 in all, are:
+= -- 914
+> -- 296
+< -- 83
++ -- 163
+- -- 56
+* -- 580
+:= -- 1753
+add.period$ -- 32
+call.type$ -- 16
+change.case$ -- 19
+chr.to.int$ -- 171
+cite$ -- 19
+duplicate$ -- 826
+empty$ -- 853
+format.name$ -- 68
+if$ -- 2617
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 152
+newline$ -- 79
+num.names$ -- 13
+pop$ -- 329
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 860
+stack$ -- 0
+substring$ -- 433
+swap$ -- 687
+text.length$ -- 26
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 16
+warning$ -- 3
+while$ -- 41
+width$ -- 18
+write$ -- 182
+(There were 3 warnings)
