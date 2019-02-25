@@ -52,10 +52,14 @@
 	
 	\subsection{Summary}
 	
-	\noindent\cite{5408367} 
-
+	The existing networks structure and traffic control mechanisms are not adequate to cope with exponential increase in volume and complexity of the network traffic. \cite{8489985} proposed a reward based deep learning structure which jointly performs traffic load prediction and value based final action decision to control the network traffic in an intelligent manner to address the issues.
 	
-	\noindent However, because
+	\noindent For the supervised deep learning, some researchers proposed to train the network for packets forwarding based on labeled traffic data. However, the labeled traffic data are difficult to collect. In the non-supervised learning, the paths combinations are considered as the action space of the training process to choose the better action based on the action reward of each iteration. Such kind of path selection and action space design is reasonable only when the number of paths combination is finite. In order to solve the above issue, \cite{8489985} employs the set of next candidate forwarding destinations as the action space, and migrate the action decision process from the centralized controller to each distributed node. In addition, the reward are constructed as a vector to fit for the upcoming time sequences, which is able to more accurately measure the temporal connections between the selected action and get better computational cost performance than contemporary deep learning approaches.
+	\begin{itemize}
+		\item System model and action space format\\
+		The topology of the considered network is a fully connected graph $G=\left(CR\cup AP,E\right)$, where $CR$ denotes the set of core routers in the network, $CR=\{cr_1,cr_2, \cdots, cr_{|CR|}\}$. AP denotes the set of access points, $AP=\left(ap_1,ap_2,\cdots,ap_{|AP|}\right)$, $N=|CR|+|AP|$, the total number of nodes, $E$ denotes the set of connection edges between all nodes. \\
+		The action spaces is modeled and calculated as an algorithm complexity problem. Assuming the complexity of a single neural network is $\mathit{O}\left(1\right)$, 
+	\end{itemize}
 	
 	\subsection{Deep Learning Based Routing Strategy}
 	\subsubsection{Input and Output Design}
@@ -114,19 +118,19 @@
 		\subfigure[Comparison of signaling overhead]{
 			\begin{minipage}[t]{0.35\linewidth}
 				\centering
-				\includegraphics[width=2.4in]{figure5}
+			%	\includegraphics[width=2.4in]{figure5}
 			\end{minipage}%
 		}%
 		\subfigure[Comparison of throughput]{
 			\begin{minipage}[t]{0.35\linewidth}
 				\centering
-				\includegraphics[width=2.4in]{figure6}
+			%	\includegraphics[width=2.4in]{figure6}
 			\end{minipage}%
 		}%
 		\subfigure[Comparison of average delay]{
 			\begin{minipage}[t]{0.35\linewidth}
 				\centering
-				\includegraphics[width=2.4in]{figure7}
+			%	\includegraphics[width=2.4in]{figure7}
 			\end{minipage}
 		}%
 	\centering
