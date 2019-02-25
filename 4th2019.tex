@@ -50,7 +50,7 @@
 	
 	\section{Reading and Research Activities}
 	
-	\subsection{Summary}
+	\subsection{Reading Summary}
 	
 	The existing networks structure and traffic control mechanisms are not adequate to cope with exponential increase in volume and complexity of the network traffic. \cite{8489985} proposed a reward based deep learning structure which jointly performs traffic load prediction and value based final action decision to control the network traffic in an intelligent manner to address the issues.
 	
@@ -61,81 +61,12 @@
 		The action spaces is modeled and calculated as an algorithm complexity problem. Assuming the complexity of a single neural network is $\mathit{O}\left(1\right)$, 
 	\end{itemize}
 	
-	\subsection{Deep Learning Based Routing Strategy}
-	\subsubsection{Input and Output Design}
-	
-	\subsubsection{Deep Learning Structure Design}
-	The authors choose the DBA as the deep learning structures as shown in Figure~\ref{1stfig}.
-	\begin{figure}[h!]
-		\centering
-		%\includegraphics[width=0.5\linewidth]{figure1.png}
-		\caption{Considered L-layer DBA}
-		\label{1stfig}
-	\end{figure}
-	
-	\subsubsection{The Procedures of the Proposed Deep Learning Based Routing Strategy}
-	\paragraph{Initialization Phase}
-
-	\paragraph{Training Phase}
-     
-	\begin{tabular}{lc}
-		\toprule
-		\textbf{Algorithm 1}. Supervised Train DBA\\
-		\hline
-		\textbf{Input:} $\left(x,y\right)=\{\left(x^t,y^t\right)|t=1,...,m\}, \eta_{CD}, \eta_{bp},L, n=\left(n_1,...,n_L\right)$\\
-		\textbf{Output: $\theta$}\\
-		1: \textbf{for} $i=1,...,L-2$ \textbf{do}\\
-		2: \quad TrainRBM $\left(u^i,\eta_{CD},n_i,n_{i+1}\right)$\\
-		3: \textbf{end for}\\
-		4: Fine-tuneDBA$\left(\left(x,y\right),\theta,\eta_{bp}\right)$\\
-		5: \textbf{return} $\theta$\\
-		\hline
-	\end{tabular}
-
-	\paragraph{Running Phase} 
-
-	
-	\begin{table}[!h]
-		\centering
-		\caption{Routing table of $R_3$}
-		\begin{tabular}{lc}
-			\toprule
-			Dest& Path\\
-			\hline
-			$R_1$& $R_3 \to R_2 \to R_1$\\
-			$R_2$& $R_3 \to R_2$\\
-			\dots& \dots\\
-			$R_{16}$& $R_3 \to R_7 \to R_{11} \to R_{15} \to R_{16}$\\
-			\hline
-		\end{tabular}
-	\end{table}
+	\subsection{Course Summary}
+	1. finished 
 
 	
 	\subsubsection{Network Performance Analysis}
-	They compared the proposed deep learning method with OSPF by the network signaling overhead, throughput and average delay. 
-	\begin{figure}[!htbp]
-		%\centering
-		\subfigure[Comparison of signaling overhead]{
-			\begin{minipage}[t]{0.35\linewidth}
-				\centering
-			%	\includegraphics[width=2.4in]{figure5}
-			\end{minipage}%
-		}%
-		\subfigure[Comparison of throughput]{
-			\begin{minipage}[t]{0.35\linewidth}
-				\centering
-			%	\includegraphics[width=2.4in]{figure6}
-			\end{minipage}%
-		}%
-		\subfigure[Comparison of average delay]{
-			\begin{minipage}[t]{0.35\linewidth}
-				\centering
-			%	\includegraphics[width=2.4in]{figure7}
-			\end{minipage}
-		}%
-	\centering
-	\caption{Comparison of network performance under different network loads}
-	\end{figure}
+	They compared the proposed deep learning method with OSPF by the network signaling overhead, throughput and average delay.
 	
 	\section{Objectives for the Next 2 Weeks}
 	\subsection{Reading} 
@@ -143,7 +74,21 @@
 	\subsection{Course} 
 	Studying chapter 1 and chapter 2 of Neural Networks and Deep Learning, \textbf{Coursera}. \url{https://www.coursera.org/learn/neural-networks-deep-learning}
 	\subsection{Code}
-	Studying the classic routing protocol: LEACH and using Matlab to implement.
+	Designing the following WSN model, the packets of N1 are forwarded to the next node, N3 or N4, via N2 which has a ML model. So, in this model, the routing problem can be simply simulated as a two-class problem.\\
+	
+	\noindent Simulation goal:\\
+	1. Learn how to build WSN by NS3\\
+	2. Explore how to add ML model in network nodes.\\
+	3. Learn how to extract network features as input layer.\\
+	4. Learn how to model routing search as problems of machine learning.\\
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=\linewidth]{wsn.png}
+		\caption{ML-based WSN model}
+		\label{1stfig}
+	\end{figure}
+
 	
 	\section{Advisor's Comments}
 	

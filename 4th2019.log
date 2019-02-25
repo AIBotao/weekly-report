@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.1.2)  24 FEB 2019 17:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.1.2)  25 FEB 2019 10:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -362,162 +362,33 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
- [1]
-Overfull \hbox (8.16937pt too wide) in paragraph at lines 123--123
-[]\OT1/cmr/m/n/9 (a)
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
  []
 
 
-Overfull \hbox (18.44708pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 Com-
+Underfull \hbox (badness 10000) in paragraph at lines 79--84
+
  []
 
-
-Overfull \hbox (12.81517pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 par-
- []
-
-
-Overfull \hbox (2.00275pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 i-
- []
-
-
-Overfull \hbox (9.76242pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 son
- []
-
-
-Overfull \hbox (3.80135pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 of
- []
-
-
-Overfull \hbox (10.2763pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 sig-
- []
-
-
-Overfull \hbox (11.76657pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 nal-
- []
-
-
-Overfull \hbox (8.68326pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 ing
- []
-
-
-Overfull \hbox (16.15889pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 over-
- []
-
-
-Overfull \hbox (15.36723pt too wide) in paragraph at lines 123--123
-\OT1/cmr/m/n/9 head 
- []
-
-
-Overfull \hbox (8.68326pt too wide) in paragraph at lines 129--129
-[]\OT1/cmr/m/n/9 (b)
- []
-
-
-Overfull \hbox (18.44708pt too wide) in paragraph at lines 129--129
-\OT1/cmr/m/n/9 Com-
- []
-
-
-Overfull \hbox (12.81517pt too wide) in paragraph at lines 129--129
-\OT1/cmr/m/n/9 par-
- []
-
-
-Overfull \hbox (2.00275pt too wide) in paragraph at lines 129--129
-\OT1/cmr/m/n/9 i-
- []
-
-
-Overfull \hbox (9.76242pt too wide) in paragraph at lines 129--129
-\OT1/cmr/m/n/9 son
- []
-
-
-Overfull \hbox (3.80135pt too wide) in paragraph at lines 129--129
-\OT1/cmr/m/n/9 of
- []
-
-
-Overfull \hbox (31.31505pt too wide) in paragraph at lines 129--129
-\OT1/cmr/m/n/9 through-
- []
-
-
-Overfull \hbox (10.22491pt too wide) in paragraph at lines 129--129
-\OT1/cmr/m/n/9 put 
- []
-
-
-Overfull \hbox (4.0055pt too wide) in paragraph at lines 135--135
-[]\OT1/cmr/m/n/9 (c)
- []
-
-
-Overfull \hbox (14.79709pt too wide) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 Com-
- []
-
-
-Overfull \hbox (9.16518pt too wide) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 par-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 i-
- []
-
-
-Overfull \hbox (6.11243pt too wide) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 son
- []
-
-
-Overfull \hbox (5.03326pt too wide) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 av-
- []
-
-
-Overfull \hbox (3.5159pt too wide) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 er-
- []
-
-
-Overfull \hbox (6.0645pt too wide) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 age
- []
-
-
-Overfull \hbox (5.03673pt too wide) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 de-
- []
-
-
-Overfull \hbox (4.51938pt too wide) in paragraph at lines 135--135
-\OT1/cmr/m/n/9 lay 
- []
-
-(./4th2019.bbl [2]) [3
+[1]
+<wsn.png, id=23, 624.08156pt x 447.92343pt>
+File: wsn.png Graphic file (type png)
+<use wsn.png>
+Package pdftex.def Info: wsn.png  used on input line 87.
+(pdftex.def)             Requested size: 478.00812pt x 343.0909pt.
+ (./4th2019.bbl [2 <./wsn.PNG>]) [3
 
 ] (./4th2019.aux) ) 
 Here is how much of TeX's memory you used:
- 3536 strings out of 492616
- 46923 string characters out of 6132769
- 123326 words of memory out of 5000000
- 7366 multiletter control sequences out of 15000+600000
- 13777 words of font info for 51 fonts, out of 8000000 for 9000
+ 3539 strings out of 492616
+ 46948 string characters out of 6132769
+ 122326 words of memory out of 5000000
+ 7368 multiletter control sequences out of 15000+600000
+ 13478 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,43p,1039b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,43p,1039b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texl
@@ -526,16 +397,15 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2018/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 4th2019.pdf (4 pages, 175803 bytes).
+m/cmr8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pf
+b><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2018/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on 4th2019.pdf (4 pages, 187176 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 76 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
