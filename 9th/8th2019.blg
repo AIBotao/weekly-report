@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: 8th2019.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: janbib.bib
+Warning--I'm ignoring 6375088's extra "title" field
+--line 319 of file janbib.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty booktitle in 5693275
+Warning--empty booktitle in 6375088
+Warning--empty journal in report
+Warning--empty journal in reportkernel
+
+Done.
+You've used 11 entries,
+            4087 wiz_defined-function locations,
+            938 strings with 10313 characters,
+and the built_in function-call counts, 7917 in all, are:
+= -- 668
+> -- 149
+< -- 66
++ -- 84
+- -- 24
+* -- 378
+:= -- 1217
+add.period$ -- 22
+call.type$ -- 11
+change.case$ -- 11
+chr.to.int$ -- 132
+cite$ -- 15
+duplicate$ -- 599
+empty$ -- 612
+format.name$ -- 33
+if$ -- 1843
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 94
+newline$ -- 56
+num.names$ -- 11
+pop$ -- 200
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 628
+stack$ -- 0
+substring$ -- 345
+swap$ -- 487
+text.length$ -- 22
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 11
+warning$ -- 4
+while$ -- 35
+width$ -- 13
+write$ -- 128
+(There were 5 warnings)
