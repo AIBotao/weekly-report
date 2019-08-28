@@ -21,17 +21,10 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{8633905}
-T.~M. {Behera}, S.~K. {Mohapatra}, U.~C. {Samal}, M.~S. {Khan},
-  M.~{Daneshmand}, and A.~H. {Gandomi}, ``Residual energy-based cluster-head
-  selection in wsns for iot application,'' \emph{IEEE Internet of Things
-  Journal}, vol.~6, no.~3, pp. 5132--5139, June 2019.
-
-\bibitem{6993070}
-A.~{Antoo} and A.~R. {Mohammed}, ``Eem-leach: Energy efficient multi-hop leach
-  routing protocol for clustered wsns,'' in \emph{2014 International Conference
-  on Control, Instrumentation, Communication and Computational Technologies
-  (ICCICCT)}, July 2014, pp. 812--818.
+\bibitem{7539358}
+J.~{Yan}, M.~{Zhou}, and Z.~{Ding}, ``Recent advances in energy-efficient
+  routing protocols for wireless sensor networks: A review,'' \emph{IEEE
+  Access}, vol.~4, pp. 5673--5686, 2016.
 
 \bibitem{7855660}
 S.~K. {Singh}, P.~{Kumar}, and J.~P. {Singh}, ``A survey on successors of leach
@@ -42,39 +35,15 @@ S.~{Zafar}, A.~{Bashir}, and S.~A. {Chaudhry}, ``Mobility-aware hierarchical
   clustering in mobile wireless sensor networks,'' \emph{IEEE Access}, vol.~7,
   pp. 20\,394--20\,403, 2019.
 
-\bibitem{7588902}
-N.~M.~A. {Latiff}, N.~N. N.~A. {Malik}, and L.~{Idoumghar}, ``Hybrid
-  backtracking search optimization algorithm and k-means for clustering in
-  wireless sensor networks,'' in \emph{2016 IEEE 14th Intl Conf on Dependable,
-  Autonomic and Secure Computing, 14th Intl Conf on Pervasive Intelligence and
-  Computing, 2nd Intl Conf on Big Data Intelligence and Computing and Cyber
-  Science and Technology Congress(DASC/PiCom/DataCom/CyberSciTech)}, Aug 2016,
-  pp. 558--564.
-
-\bibitem{8252252}
-H.~{Echoukairi}, A.~{Kada}, K.~{Bouragba}, and M.~{Ouzzif}, ``A novel
-  centralized clustering approach based on k-means algorithm for wireless
-  sensor network,'' in \emph{2017 IEEE Computing Conference}, July 2017, pp.
-  1259--1262.
-
-\bibitem{5693275}
-H.~M. {Abdulsalam} and L.~K. {Kamel}, ``W-leach: Weighted low energy adaptive
-  clustering hierarchy aggregation algorithm for data streams in wireless
-  sensor networks,'' Dec 2010, pp. 1--8.
-
-\bibitem{doi:10.1155/2013/289527}
-H.~M. Abdulsalam and B.~A. Ali, ``W-leach based dynamic adaptive data
-  aggregation algorithm for wireless sensor networks,'' \emph{International
-  Journal of Distributed Sensor Networks}, vol.~9, no.~9, p. 289527, 2013.
-
 \bibitem{6375088}
 P.~{Sasikumar} and S.~{Khara}, ``2012 fourth international conference on
   computational intelligence and communication networks,'' Nov 2012, pp.
   140--144.
 
-\bibitem{Bidaki2016TowardsEE}
-M.~Bidaki, R.~Ghaemi, and S.~R.~K. Tabbakh, ``Towards energy efficient k-means
-  based clustering scheme for wireless sensor networks 1,'' 2016.
+\bibitem{quchan2016towards}
+I.~Quchan, ``Towards energy efficient k-means based clustering scheme for
+  wireless sensor networks,'' \emph{International Journal of Grid and
+  Distributed Computing}, vol.~9, no.~7, pp. 265--276, 2016.
 
 \bibitem{Sangameswaran}
 A.~S.~D. Sasikala and N.~Sangameswaran, ``Improving the energy efficiency of
@@ -82,26 +51,35 @@ A.~S.~D. Sasikala and N.~Sangameswaran, ``Improving the energy efficiency of
   Journal of Engineering Development and Research}, vol.~3, no.~2, pp.
   918--924, 2015.
 
-\bibitem{doi:10.1155/2016/5040475}
-S.~Periyasamy, S.~Khara, and S.~Thangavelu, ``Balanced cluster head selection
-  based on modified k-means in a distributed wireless sensor network,''
-  \emph{International Journal of Distributed Sensor Networks}, vol.~12, no.~3,
-  p. 5040475, 2016.
+\bibitem{rabiaa2015improvements}
+E.~Rabiaa, B.~Noura, and C.~Adnene, ``Improvements in leach based on k-means
+  and gauss algorithms,'' \emph{Procedia Computer Science}, vol.~73, pp.
+  460--467, 2015.
 
 \bibitem{report}
 C.~Bauckhage, ``Lecture notes on data science: Soft k-means clustering,'' 2015.
+
+\bibitem{926982}
+W.~R. {Heinzelman}, A.~{Chandrakasan}, and H.~{Balakrishnan},
+  ``Energy-efficient communication protocol for wireless microsensor
+  networks,'' in \emph{Proceedings of the 33rd Annual Hawaii International
+  Conference on System Sciences}, Jan 2000, pp. 10 pp. vol.2--.
+
+\bibitem{1045297}
+W.~B. {Heinzelman}, A.~P. {Chandrakasan}, and H.~{Balakrishnan}, ``An
+  application-specific protocol architecture for wireless microsensor
+  networks,'' \emph{IEEE Transactions on Wireless Communications}, vol.~1,
+  no.~4, pp. 660--670, Oct 2002.
+
+\bibitem{6602412}
+M.~{Mohamed-Lamine}, ``New clustering scheme for wireless sensor networks,'' in
+  \emph{2013 8th IEEE International Workshop on Systems, Signal Processing and
+  their Applications (WoSSPA)}, May 2013, pp. 487--491.
 
 \bibitem{randhawa2016performance}
 S.~Randhawa and S.~Jain, ``Performance analysis of leach with machine learning
   algorithms in wireless sensor networks,'' \emph{International Journal of
   Computer Applications}, vol. 147, no.~2, pp. 7--12, 2016.
-
-\bibitem{6550511}
-G.~Y. {Park}, H.~{Kim}, H.~W. {Jeong}, and H.~Y. {Youn}, ``A novel cluster head
-  selection method based on k-means algorithm for energy efficient wireless
-  sensor network,'' in \emph{2013 27th IEEE International Conference on
-  Advanced Information Networking and Applications Workshops}, March 2013, pp.
-  910--915.
 
 \bibitem{4622679}
 L.~{Tan}, Y.~{Gong}, and G.~{Chen}, ``A balanced parallel clustering protocol
@@ -109,43 +87,17 @@ L.~{Tan}, Y.~{Gong}, and G.~{Chen}, ``A balanced parallel clustering protocol
   Second International Conference on Sensor Technologies and Applications
   (sensorcomm 2008)}, Aug 2008, pp. 300--305.
 
-\bibitem{1420160}
-S.~{Soro} and W.~B. {Heinzelman}, ``Prolonging the lifetime of wireless sensor
-  networks via unequal clustering,'' in \emph{19th IEEE International Parallel
-  and Distributed Processing Symposium}, April 2005, pp. 8 pp.--.
+\bibitem{mahboub2017energy}
+A.~Mahboub, M.~Arioua \emph{et~al.}, ``Energy-efficient hybrid k-means
+  algorithm for clustered wireless sensor networks,'' \emph{International
+  Journal of Electrical and Computer Engineering}, vol.~7, no.~4, p. 2054,
+  2017.
 
-\bibitem{6785530}
-P.~{Chatterjee} and N.~{Das}, ``Coverage constrained non-uniform node
-  deployment in wireless sensor networks for load balancing,'' in \emph{2014
-  Applications and Innovations in Mobile Computing (AIMoC)}, Feb 2014, pp.
-  126--132.
-
-\bibitem{7489086}
-S.~{Gajjar}, A.~{Talati}, M.~{Sarkar}, and K.~{Dasgupta}, ``Fucp: Fuzzy based
-  unequal clustering protocol for wireless sensor networks,'' in \emph{2015
-  39th IEEE National Systems Conference (NSC)}, Dec 2015, pp. 1--6.
-
-\bibitem{Guiloufi2016}
-\BIBentryALTinterwordspacing
-A.~B.~F. Guiloufi, N.~Nasri, and A.~Kachouri, ``An energy-efficient unequal
-  clustering algorithm using `sierpinski triangle' for wsns,'' \emph{Wireless
-  Personal Communications}, vol.~88, no.~3, pp. 449--465, Jun 2016. [Online].
-  Available: \url{https://doi.org/10.1007/s11277-015-3137-0}
-\BIBentrySTDinterwordspacing
-
-\bibitem{6602412}
-M.~{Mohamed-Lamine}, ``New clustering scheme for wireless sensor networks,'' in
-  \emph{2013 8th IEEE International Workshop on Systems, Signal Processing and
-  their Applications (WoSSPA)}, May 2013, pp. 487--491.
-
-\bibitem{YU201254}
-\BIBentryALTinterwordspacing
-J.~Yu, Y.~Qi, G.~Wang, and X.~Gu, ``A cluster-based routing protocol for
-  wireless sensor networks with nonuniform node distribution,'' \emph{AEU -
-  International Journal of Electronics and Communications}, vol.~66, no.~1, pp.
-  54 -- 61, 2012. [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/S1434841111001312}
-\BIBentrySTDinterwordspacing
+\bibitem{7763028}
+A.~{Ray} and D.~{De}, ``Energy efficient clustering protocol based on k-means
+  (eecpk-means)-midpoint algorithm for enhanced network lifetime in wireless
+  sensor network,'' \emph{IET Wireless Sensor Systems}, vol.~6, no.~6, pp.
+  181--191, 2016.
 
 \bibitem{1990}
 W.~Härdle, \emph{Applied Nonparametric Regression}, ser. Econometric Society
@@ -165,18 +117,6 @@ N.~Srikanth and M.~Ganga~Prasad, ``Efficient clustering protocol using fuzzy
   k-means and midpoint algorithm for lifetime improvement in wsns,''
   \emph{International Journal of Intelligent Engineering and Systems}, vol.~11,
   pp. 61--71, 08 2018.
-
-\bibitem{7763028}
-A.~{Ray} and D.~{De}, ``Energy efficient clustering protocol based on k-means
-  (eecpk-means)-midpoint algorithm for enhanced network lifetime in wireless
-  sensor network,'' \emph{IET Wireless Sensor Systems}, vol.~6, no.~6, pp.
-  181--191, 2016.
-
-\bibitem{1045297}
-W.~B. {Heinzelman}, A.~P. {Chandrakasan}, and H.~{Balakrishnan}, ``An
-  application-specific protocol architecture for wireless microsensor
-  networks,'' \emph{IEEE Transactions on Wireless Communications}, vol.~1,
-  no.~4, pp. 660--670, Oct 2002.
 
 \bibitem{Rodriguez1492}
 \BIBentryALTinterwordspacing
